@@ -1,0 +1,129 @@
+* {
+  box-sizing: border-box; }
+
+html {
+  font-size: 100%; }
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 150%;
+  font-weight: 500;
+  font-size: 1.5rem;
+  color: #040404; }
+
+h1 {
+  margin: 0;
+  font-family: "Bitter", serif;
+  font-weight: bold;
+  font-size: 3rem;
+  line-height: 120%;
+  margin-bottom: 2rem; }
+
+p {
+  margin: 0;
+  margin-bottom: 2rem; }
+
+button, .button {
+  display: inline-block;
+  vertical-align: baseline;
+  cursor: pointer;
+  border: none;
+  text-decoration: none;
+  font-family: "Bitter", serif;
+  background-color: #DEF4FF;
+  color: #040404;
+  font-size: 2rem;
+  padding: 0 2rem;
+  margin-right: 2rem;
+  height: 4.75rem;
+  line-height: 4.75rem;
+  transition: background-color 0.1s;
+  margin-bottom: 2rem; }
+  button:hover, button:focus, .button:hover, .button:focus {
+    background-color: #c5ecff; }
+
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding-top: 3rem; }
+
+.header-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: auto; }
+  @media screen and (min-width: 425px) {
+    .header-content {
+      flex-direction: row;
+      height: 9rem; } }
+  .header-content img {
+    height: 100%;
+    width: auto; }
+  .header-content h1 {
+    margin-top: 1rem;
+    text-align: center;
+    margin-bottom: 0; }
+    @media screen and (min-width: 425px) {
+      .header-content h1 {
+        text-align: left;
+        margin-top: 0;
+        margin-left: 1rem; } }
+
+.intro-block {
+  width: 100%;
+  padding: 2rem;
+  max-width: 36rem;
+  margin: 0 auto; }
+
+.portfolio-item {
+  display: flex;
+  height: 45rem; }
+  .portfolio-item--reverse {
+    flex-direction: row-reverse; }
+  .portfolio-item__screenshot {
+    flex: 1;
+    position: relative;
+    height: 100%;
+    overflow: hidden;
+    box-shadow: 0 0.375rem 0.75rem 0 rgba(0, 0, 0, 0.16); }
+    .portfolio-item__screenshot img {
+      position: absolute;
+      right: 0;
+      top: 0;
+      height: 100%;
+      width: auto; }
+      .portfolio-item--reverse .portfolio-item__screenshot img {
+        left: 0;
+        right: initial; }
+  .portfolio-item__content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; }
+    .portfolio-item__content__wrapper {
+      padding: 2rem;
+      max-width: 36rem; }
+  .portfolio-item__category {
+    display: block;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    text-transform: uppercase;
+    font-size: 1rem;
+    letter-spacing: 0.1rem;
+    margin-bottom: 0.75rem; }
+
+.space-after {
+  margin-bottom: 8rem; }
+  .space-after--big {
+    margin-bottom: 16rem; }
+
+footer {
+  width: 100%;
+  padding-bottom: 3rem; }
+  footer p {
+    font-weight: normal;
+    font-size: 1rem;
+    text-align: center; }

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Home - Hoagies</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Bungee|Roboto:500,700">
+    <link rel="stylesheet" href="./dist/css/font-awesome.css">
+    <link rel="stylesheet" href="./dist/css/reset.css">
+    <link rel="stylesheet" href="./dist/css/global.css">
+    <script type="text/javascript" src="./dist/js/global.js"></script>
+    <link rel="stylesheet" href="dist/css/home.css">
+    <script type="text/javascript" src="dist/js/home.js"></script>
+    <meta name="description" content="Welcome to Hoagies, the best food truck in bellingham for the tastiest sandwiches and subs in bellingham, currently located near Barkley Village.">
+  </head>
+  <body>
+    <div id="wrapper">
+      <div id="wrapper-main">
+        <header id="header">
+          <nav>
+            <div id="header-nav__logo"><a href="/"><img src="./dist/images/logo.svg"></a></div>
+            <ul>
+              <div class="header-nav__mobile-only"><a href="./index.html">
+                  <li>Home</li></a>
+              </div>
+              <div class="header-nav__left"><a href="./pages/menu.html">
+                  <li>Menu</li></a><a href="./pages/about.html">
+                  <li>About</li></a>
+              </div>
+              <div class="header-nav__right"><a href="./pages/blog.html">
+                  <li>Blog</li></a><a href="./pages/contact.html">
+                  <li>Contact</li></a>
+              </div>
+              <div class="header-nav__mobile-only"><a href="./pages/signup.html">
+                  <li>Subscribe</li></a>
+              </div>
+            </ul>
+          </nav>
+          <div id="header__toggle">Home</div>
+          <svg class="rounded-svg rounded-svg--pop-bottom rounded-svg--black" viewBox="0 0 100 1" preserveAspectRatio="none">
+            <path d="M 0 0 C 25 1, 75 1, 100 0 Z"></path>
+          </svg>
+        </header>
+        <div id="content">
+          <div class="heading-image" role="img" aria-label="Close up of a hoagie sandwich"></div>
+          <div class="pb-2">
+            <div class="relative">
+              <svg class="rounded-svg rounded-svg--pop-top rounded-svg--black" viewBox="0 0 100 1" preserveAspectRatio="none">
+                <path d="M 0 1 C 25 0, 75 0, 100 1 Z"></path>
+              </svg>
+              <div class="bg-black pale pv-1 ph-2 text-center">
+                <h1 class="big-text-block"><span class="big-text-block__2 no-shadow">The Best</span><span class="big-text-block__1">Hoagies</span><span class="big-text-block__2 no-shadow">- In Bellingham -</span></h1>
+                <h2>Since 2013</h2><br>
+                <div class="inline-block row"><a class="button button--square" href="https://www.twitter.com"><span class="fab fa-twitter"></span></a><a class="button button--square" href="https://www.facebook.com"><span class="fab fa-facebook-f"></span></a><a class="button button--square" href="https://www.instagram.com"><span class="fab fa-instagram"></span></a></div>
+              </div>
+              <svg class="rounded-svg rounded-svg--pop-bottom rounded-svg--black" viewBox="0 0 100 1" preserveAspectRatio="none">
+                <path d="M 0 0 C 25 1, 75 1, 100 0 Z"></path>
+              </svg>
+            </div>
+            <div class="page">
+              <div class="expand-card expand-card--reversed">
+                <div class="expand-card__item" id="map" style="padding: 0; min-height: 200px;"></div>
+                <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD7dLCdqLrRJjEzsFAPOXQcyDrWoQQrmUQ&amp;callback=initMap"></script>
+                <div class="expand-card__item">
+                  <div>
+                    <h1>Our location</h1>
+                    <div class="highlight-box text-center mb-1">
+                      <p class="big-text no-char-limit"><b>2900 Woburn St<br>Bellingham, WA 98226</b></p>
+                      <p class="no-margin no-char-limit">7AM to 10PM<br>Closed Sundays</p>
+                    </div>
+                    <p>We change locations every week, and we let you decide where we're going to be next. Sign up to help us pick where to go next!</p>
+                    <div class="limit-width"><a class="button full-width" href="/pages/signup">Subscribe for updates</a><a class="button full-width" href="https://www.google.com/maps/place/Barkley+Village/@48.770783,-122.446848,17z/data=!4m5!3m4!1s0x0:0xcd5f8c3491545413!8m2!3d48.7702032!4d-122.4455398?hl=en-US" target="_blank">View on Map</a></div>
+                  </div>
+                </div>
+              </div>
+              <div class="expand-card expand-card--black">
+                <div class="expand-card__image" style="background-image: url(./dist/images/hoagies/lamb.jpg);" role="img" aria-label="Close up of a lamb hoagie featuring lamb, onion, tomato, lettuce, cucumbers and baby kale on an artisan bun."></div>
+                <div class="expand-card__item">
+                  <div>
+                    <h1>Our Menu</h1>
+                    <p>We create our hoagies from fresh, locally sourced ingredients. We strive for great taste and uniqueness.</p>
+                    <div class="limit-width"><a class="button" href="/pages/menu">See our menu</a></div>
+                  </div>
+                </div>
+              </div>
+              <div class="expand-card expand-card--reversed">
+                <div class="expand-card__image" style="background-image: url(./dist/images/food-truck.jpg);" role="img" aria-label="Picture of a smiling man standing in front of a yellow food truck van. The van has the hoagies logo on it."></div>
+                <div class="expand-card__item">
+                  <div>
+                    <h1>About Us</h1>
+                    <p>Learn a little more about your favorite neighborhood source of hoagies.</p>
+                    <div class="limit-width"><a class="button button--bigger">Learn More</a></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <footer>
+        <svg viewBox="0 0 100 1.2" id="footer__roundness" preserveAspectRatio="none">
+          <path d="M-10-0.9c8.2,1.2,32,2,60,2s51.8-0.8,60-2H-10z"></path>
+        </svg>
+        <div class="clearfix" id="footer__content"><a href="#"><img class="clearfix" src="./dist/images/truck.svg" id="footer__truck"></a>
+          <nav class="footer-links">
+            <div class="footer-links__left">
+              <ul>
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./pages/about.html">About</a></li>
+                <li><a href="./pages/contact.html">Contact</a></li>
+              </ul>
+            </div>
+            <div class="footer-links__right">
+              <ul>
+                <li><a href="./pages/blog.html">Blog</a></li>
+                <li><a href="./pages/menu.html">Menu</a></li>
+                <li><a href="./pages/signup.html">Subscribe</a></li>
+              </ul>
+            </div>
+          </nav>
+          <div class="row mb-1"><a class="fab fa-twitter big-text" href="https://www.twitter.com"></a><a class="fab fa-facebook-f big-text" href="https://www.facebook.com"></a><a class="fab fa-instagram big-text" href="https://www.instagram.com"></a></div><span class="small-text block">© 2018 Michael Savchuk</span>
+        </div>
+      </footer>
+      <div id="popup">
+        <div id="popup__content">
+          <h1 id="popup__heading">There was an error showing this message</h1>
+          <p><b id="popup__text">Whatever you just did, it made something go wrong. Ignore the following message and maybe try again?</b></p>
+          <p>If you didn't get an email, give it a minute or two. and check your spam folder perhaps. If you still didn't get it, maybe <a id="popup__reflink" href="/pages/signup">try again?</a> Perhaps you spelled it wrong?</p>
+          <button id="popup__close">Close</button>
+        </div>
+      </div>
+      <script>initPopup();</script>
+      <script>DOMLoaded();</script>
+    </div>
+  </body>
+</html>

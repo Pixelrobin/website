@@ -1,0 +1,177 @@
+$font-bitter: 'Bitter', serif;
+$font-segoe: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+$color-blue: #DEF4FF;
+$color-black: #040404;
+
+$button-height: 4.75rem;
+
+$breakpoint-mobile: 425px;
+
+* {
+	box-sizing: border-box;
+}
+
+html {
+	font-size: 100%;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	font-family: $font-segoe;
+	line-height: 150%;
+	font-weight: 500;
+	font-size: 1.5rem;
+	color: $color-black;
+}
+
+h1 {
+	margin: 0;
+	font-family: $font-bitter;
+	font-weight: bold;
+	font-size: 3rem;
+	line-height: 120%;
+	margin-bottom: 2rem;
+}
+
+p {
+	margin: 0;
+	margin-bottom: 2rem;
+}
+
+button, .button {
+	display: inline-block;
+	vertical-align: baseline;
+	cursor: pointer;
+	border: none;
+	text-decoration: none;
+	font-family: $font-bitter;
+	background-color: $color-blue;
+	color: $color-black;
+	font-size: 2rem;
+	padding: 0 2rem;
+	margin-right: 2rem;
+	height: $button-height;
+	line-height: $button-height;
+	transition: background-color 0.1s;
+	margin-bottom: 2rem;
+
+	&:hover, &:focus {
+		background-color: darken($color-blue, 5%);
+	}
+}
+
+header {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	padding-top: 3rem;
+}
+
+.header-content {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	height: auto;
+
+	@media screen and (min-width: $breakpoint-mobile) {
+		flex-direction: row;
+		height: 9rem;
+	}
+
+	img {
+		height: 100%;
+		width: auto;
+	}
+
+	h1 {
+		margin-top: 1rem;
+		text-align: center;
+		margin-bottom: 0;
+
+		@media screen and (min-width: $breakpoint-mobile) {
+			text-align: left;
+			margin-top: 0;
+			margin-left: 1rem;
+		}
+	}
+}
+
+.intro-block {
+	width: 100%;
+	padding: 2rem;
+	max-width: 36rem;
+	margin: 0 auto;
+}
+
+.portfolio-item {
+	display: flex;
+	height: 45rem;
+
+	&--reverse {
+		flex-direction: row-reverse;
+	}
+
+	&__screenshot {
+		flex: 1;
+		position: relative;
+		height: 100%;
+		overflow: hidden;
+		box-shadow: 0 0.375rem 0.75rem 0 rgba(0, 0, 0, 0.16);
+
+		img {
+			position: absolute;
+			right: 0;
+			top: 0;
+			height: 100%;
+			width: auto;
+
+			.portfolio-item--reverse & {
+				left: 0;
+				right: initial;
+			}
+		}
+	}
+
+	&__content {
+		flex: 1;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+
+		&__wrapper {
+			padding: 2rem;
+			max-width: 36rem;
+		}
+	}
+
+	&__category {
+		display: block;
+		font-family: $font-segoe;
+		text-transform: uppercase;
+		font-size: 1rem;
+		letter-spacing: 0.1rem;
+		margin-bottom: 0.75rem;
+	}
+}
+
+.space-after {
+	margin-bottom: 8rem;
+
+	&--big {
+		margin-bottom: 16rem;
+	}
+}
+
+footer {
+	width: 100%;
+	padding-bottom: 3rem;
+
+	p {
+		font-weight: normal;
+		font-size: 1rem;
+		text-align: center;
+	}
+}

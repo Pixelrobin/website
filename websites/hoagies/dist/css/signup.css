@@ -1,0 +1,18 @@
+#wrapper-main {
+    background-color: #ffe9d7;
+}
+
+footer #footer__roundness path {
+    fill: #ffe9d7;
+}
+
+form {
+    display: block;
+    width: 500px;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+form input[type="email"], form input[type="text"] {
+    width: 100%;
+}

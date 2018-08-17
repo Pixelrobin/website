@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>About - Hoagies</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Bungee|Roboto:500,700">
+    <link rel="stylesheet" href="../dist/css/font-awesome.css">
+    <link rel="stylesheet" href="../dist/css/reset.css">
+    <link rel="stylesheet" href="../dist/css/global.css">
+    <script type="text/javascript" src="../dist/js/global.js"></script>
+    <link rel="stylesheet" href="../dist/css/contact.css">
+    <meta name="description" content="Contact us at the Hoagies email or form, or at our twitter.">
+  </head>
+  <body>
+    <div id="wrapper">
+      <div id="wrapper-main">
+        <header id="header">
+          <nav>
+            <div id="header-nav__logo"><a href="/"><img src="../dist/images/logo.svg"></a></div>
+            <ul>
+              <div class="header-nav__mobile-only"><a href="../index.html">
+                  <li>Home</li></a>
+              </div>
+              <div class="header-nav__left"><a href="../pages/menu.html">
+                  <li>Menu</li></a><a href="../pages/about.html">
+                  <li>About</li></a>
+              </div>
+              <div class="header-nav__right"><a href="../pages/blog.html">
+                  <li>Blog</li></a><a href="../pages/contact.html">
+                  <li>Contact</li></a>
+              </div>
+              <div class="header-nav__mobile-only"><a href="../pages/signup.html">
+                  <li>Subscribe</li></a>
+              </div>
+            </ul>
+          </nav>
+          <div id="header__toggle">About</div>
+          <svg class="rounded-svg rounded-svg--pop-bottom rounded-svg--black" viewBox="0 0 100 1" preserveAspectRatio="none">
+            <path d="M 0 0 C 25 1, 75 1, 100 0 Z"></path>
+          </svg>
+        </header>
+        <div id="content">
+          <div class="page">
+            <h1 class="text-center">Contact Us</h1>
+            <div id="contact-stuff">
+              <p>There are multiple ways you can contact us.</p>
+              <ul>
+                <li>If you don't mind being public, the best way you can contact us is by  <a href="https://www.twitter.com">tweeting at us</a>.</li>
+                <li>If you prefer email or have a personal matter, you can email us at <a href="mailto:contact@hoagies.com">contact@hoagies.com</a>.</li>
+                <li>Alternatively, you can use the contact form below:</li>
+              </ul>
+              <form action="../index.html">
+                <input type="hidden" name="type" value="contact">
+                <label>Your Name<br>
+                  <input type="text" placeholder="John Doe" name="name" required>
+                </label>
+                <label>Your email<br>
+                  <input type="email" placeholder="johndoe@mail.com" name="email" required>
+                </label>
+                <label>Message<br>
+                  <textarea placeholder="Your message here" name="text" required></textarea>
+                </label>
+                <p>Please make sure your email is correct before submitting.</p>
+                <input type="submit" value="Send">
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      <footer>
+        <svg viewBox="0 0 100 1.2" id="footer__roundness" preserveAspectRatio="none">
+          <path d="M-10-0.9c8.2,1.2,32,2,60,2s51.8-0.8,60-2H-10z"></path>
+        </svg>
+        <div class="clearfix" id="footer__content"><a href="#"><img class="clearfix" src="../dist/images/truck.svg" id="footer__truck"></a>
+          <nav class="footer-links">
+            <div class="footer-links__left">
+              <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../pages/about.html">About</a></li>
+                <li><a href="../pages/contact.html">Contact</a></li>
+              </ul>
+            </div>
+            <div class="footer-links__right">
+              <ul>
+                <li><a href="../pages/blog.html">Blog</a></li>
+                <li><a href="../pages/menu.html">Menu</a></li>
+                <li><a href="../pages/signup.html">Subscribe</a></li>
+              </ul>
+            </div>
+          </nav>
+          <div class="row mb-1"><a class="fab fa-twitter big-text" href="https://www.twitter.com"></a><a class="fab fa-facebook-f big-text" href="https://www.facebook.com"></a><a class="fab fa-instagram big-text" href="https://www.instagram.com"></a></div><span class="small-text block">© 2018 Michael Savchuk</span>
+        </div>
+      </footer>
+      <script>DOMLoaded();</script>
+    </div>
+  </body>
+</html>
