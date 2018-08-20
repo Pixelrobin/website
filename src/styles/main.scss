@@ -203,3 +203,18 @@ footer {
 		text-align: center;
 	}
 }
+
+.coming-soon {
+	width: 100%;
+	height: 100vh;
+	font-family: $font-bitter;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 2rem;
+
+	h1 {
+		margin: 0;
+		text-align: center;
+	}
+}

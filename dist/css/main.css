@@ -146,3 +146,15 @@ footer {
     font-weight: normal;
     font-size: 1rem;
     text-align: center; }
+
+.coming-soon {
+  width: 100%;
+  height: 100vh;
+  font-family: "Bitter", serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem; }
+  .coming-soon h1 {
+    margin: 0;
+    text-align: center; }
