@@ -58,6 +58,8 @@ button, .button {
       vertical-align: baseline; } }
   button:hover, button:focus, .button:hover, .button:focus {
     background-color: #c5ecff; }
+  button:last-child, .button:last-child {
+    margin-right: 0; }
 
 a {
   color: #040404; }
@@ -269,6 +271,14 @@ em {
 
 .shadow {
   box-shadow: 0 0.375rem 0.75rem 0 rgba(0, 0, 0, 0.16); }
+
+.button-nav {
+  padding: 0 2rem; }
+  @media screen and (min-width: 425px) {
+    .button-nav {
+      width: 100%;
+      display: flex;
+      justify-content: center; } }
 
 .space-after {
   margin-bottom: 2rem; }
