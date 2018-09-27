@@ -37,7 +37,6 @@ p {
 
 button, .button {
   display: block;
-  vertical-align: baseline;
   cursor: pointer;
   border: none;
   text-decoration: none;
@@ -55,7 +54,8 @@ button, .button {
   @media screen and (min-width: 425px) {
     button, .button {
       margin-right: 2rem;
-      display: inline-block; } }
+      display: inline-block;
+      vertical-align: baseline; } }
   button:hover, button:focus, .button:hover, .button:focus {
     background-color: #c5ecff; }
 
@@ -68,12 +68,12 @@ header {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  padding-top: 4rem;
-  padding-bottom: 4rem; }
+  margin-top: 4rem;
+  margin-bottom: 4rem; }
   @media screen and (min-width: 600px) {
     header {
-      padding-top: 8rem;
-      padding-bottom: 8rem; } }
+      margin-top: 8rem;
+      margin-bottom: 8rem; } }
 
 ul, ol {
   margin: 0;
