@@ -70,9 +70,10 @@ header {
   margin-top: 8rem;
   margin-bottom: 8rem; }
 
-ul {
+ul, ol {
   margin: 0;
-  padding-left: 2rem; }
+  padding-left: 2rem;
+  margin-bottom: 2rem; }
 
 .header-content {
   display: flex;
@@ -229,6 +230,14 @@ em {
   margin-left: auto;
   margin-right: auto; }
 
+.media-bigger {
+  display: block;
+  width: 100%;
+  max-width: 1250px;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto; }
+
 .media-medium {
   display: block;
   width: 100%;
@@ -249,6 +258,9 @@ em {
   margin-left: auto;
   margin-right: auto;
   padding: 0 2rem; }
+
+.shadow {
+  box-shadow: 0 0.375rem 0.75rem 0 rgba(0, 0, 0, 0.16); }
 
 .space-after {
   margin-bottom: 2rem; }
