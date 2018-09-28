@@ -16,7 +16,7 @@
       <div id="wrapper-main">
         <header id="header">
           <nav>
-            <div id="header-nav__logo"><a href="../index.html"><img src="../dist/images/logo.svg"></a></div>
+            <div id="header-nav__logo"><a href="/"><img src="../dist/images/logo.svg"></a></div>
             <ul>
               <div class="header-nav__mobile-only"><a href="../index.html">
                   <li>Home</li></a>
@@ -51,15 +51,12 @@
               </ul>
               <form action="../index.html">
                 <input type="hidden" name="type" value="contact">
-                <label>Your Name<br>
-                  <input type="text" placeholder="John Doe" name="name" required>
-                </label>
-                <label>Your email<br>
-                  <input type="email" placeholder="johndoe@mail.com" name="email" required>
-                </label>
-                <label>Message<br>
-                  <textarea placeholder="Your message here" name="text" required></textarea>
-                </label>
+                <label for="name">Your Name</label>
+                <input id="name" type="text" placeholder="John Doe" name="name" required>
+                <label for="email">Your email</label>
+                <input id="email" type="email" placeholder="johndoe@mail.com" name="email" required>
+                <label for="text">Message</label>
+                <textarea id="text" placeholder="Your message here" name="text" required></textarea>
                 <p>Please make sure your email is correct before submitting.</p>
                 <input type="submit" value="Send">
               </form>

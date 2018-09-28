@@ -16,7 +16,7 @@
       <div id="wrapper-main">
         <header id="header">
           <nav>
-            <div id="header-nav__logo"><a href="../index.html"><img src="../dist/images/logo.svg"></a></div>
+            <div id="header-nav__logo"><a href="/"><img src="../dist/images/logo.svg"></a></div>
             <ul>
               <div class="header-nav__mobile-only"><a href="../index.html">
                   <li>Home</li></a>
@@ -46,12 +46,10 @@
                 <h1 class="text-center">Sign up for updates</h1>
                 <form action="../index.html">
                   <input type="hidden" name="type" value="signup">
-                  <label>Your Name<br>
-                    <input type="text" placeholder="John Doe" name="name" required>
-                  </label>
-                  <label>Your email<br>
-                    <input type="email" placeholder="johndoe@mail.com" name="email" required>
-                  </label>
+                  <label for="name">Your Name</label>
+                  <input id="name" type="text" placeholder="John Doe" name="name" required>
+                  <label for="email">Your email</label>
+                  <input id="email" type="email" placeholder="johndoe@mail.com" name="email" required>
                   <p>You can cancel at any time.</p>
                   <input type="submit" value="Sign me up!">
                 </form>
