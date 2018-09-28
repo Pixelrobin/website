@@ -1275,6 +1275,11 @@ header.home .header__hero .header__hero__content .button {
   }
 }
 
+.map {
+  width: 100%;
+  max-width: 640px;
+}
+
 /* --- Recipes --- */
 .recipe-list {
   list-style-type: none;
