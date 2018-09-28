@@ -1,3 +1,3 @@
-# pixelrobin.github.io
+# [pixelrobin.github.io](https://pixelrobin.github.io)
 
-Currently a work in progress...
+Personal website for the moment. Made with Gulp, Pug and Sass (SCSS).
