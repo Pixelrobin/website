@@ -2,13 +2,13 @@ extends deps/layout
 
 block content
 	video.shadow.media-big.space-after(mute autoplay loop)
-		source(src="./media/portfolio-items/tainted-avocados/home-page.mp4" type="video/mp4")
+		source(src="./media/portfolio-items/tainted-avocados/home-page.mp4" type="video/mp4" title="View of the Tainted Avocados homepage.")
 	
 	.text-block.space-after
 		h1 The Tainted Avocados
 		p The Tainted Avocados are a fictional <em>indie band</em> that's just starting out.
 	
-	img.media-medium.space-after(src="./media/portfolio-items/tainted-avocados/blog.jpg", alt="")
+	img.media-medium.space-after(src="./media/portfolio-items/tainted-avocados/blog.jpg", alt="A view of the Tainted Avocados blog page.")
 	
 	.text-block.space-after
 		h1 Requirements
@@ -24,7 +24,7 @@ block content
 		p All this had to be <em>easily editable</em> by the members via WordPress' capabilities.
 	
 	video.media-small.space-after(mute autoplay loop)
-		source(src="./media/portfolio-items/tainted-avocados/mobile-menu.mp4" type="video/mp4")
+		source(src="./media/portfolio-items/tainted-avocados/mobile-menu.mp4" type="video/mp4" title="Example of the Tainted Avocados mobile menu animation.")
 	
 	.text-block.space-after
 		h1 Workflow
@@ -34,23 +34,23 @@ block content
 			li Style Tile exploration and mockups in <em>Adobe Xd</em>
 			li Coded in <em>Visual Studio Code</em>
 	
-	img.media-bigger.space-after(src="./media/portfolio-items/tainted-avocados/device-previews.jpg", alt="")
+	img.media-bigger.space-after(src="./media/portfolio-items/tainted-avocados/device-previews.jpg", alt="Various pages of the Tainted Avocados website on a tablet, desktop computer, and laptop.")
 	
 	.text-block.space-after
 		h1 Technical Stack
 
 		p The WordPress theme and plugins were coded from scratch in <em>PHP</em>, the CSS was compiled from <em>SASS (SCSS)</em>, and the JavaScript was transpiled and bundled via <em>Webpack</em> and <em>Babel</em>. All the build processes were handled with <em>Gulp</em>. I used <em>WAMPServer</em> to host the site locally while developing and <em>BrowserSync</em> to auto reload the browser.
 	
-	img.media-medium.space-after(src="./media/portfolio-items/tainted-avocados/events.png", alt="")
+	img.media-medium.space-after(src="./media/portfolio-items/tainted-avocados/events.png", alt="The Tainted Avocados event listing page.")
 
 	.text-block
 		h1 Band Events
 
 		p I created a <em>custom plugin</em> to add a simple <em>"Event" post type</em> to Wordpress, allowing the band to post events with a time, location and links to tickets. The date field uses <a href="https://flatpickr.js.org/">flatpickr</a> to function.
 	
-	img.shadow.media-medium.space-after(src="./media/portfolio-items/tainted-avocados/plugin.png", alt="")
+	img.shadow.media-medium.space-after(src="./media/portfolio-items/tainted-avocados/plugin.png", alt="A view of the WordPress dashboard in which an event listing is being edited.")
 
-	img.media-bigger.space-after(src="./media/portfolio-items/tainted-avocados/headers.jpg", alt="")
+	img.media-bigger.space-after(src="./media/portfolio-items/tainted-avocados/headers.jpg", alt="A comparison of various different Tainted Avocados headers seen across different pages in the site.")
 
 	.button-nav
 		a.button(href="./art-of-cooking.html") Previous
