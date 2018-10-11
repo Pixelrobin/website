@@ -1,7 +1,8 @@
-const gulp = require('gulp');
-const sass = require('gulp-sass');
-const pug  = require('gulp-pug');
-const bs   = require('browser-sync');
+const gulp    = require('gulp');
+const sass    = require('gulp-sass');
+const pug     = require('gulp-pug');
+const bs      = require('browser-sync');
+const version = require('gulp-version-number');
 
 gulp.task('styles', done =>
 	gulp.src('src/styles/*.scss')
@@ -13,6 +14,13 @@ gulp.task('styles', done =>
 gulp.task('views', done =>
 	gulp.src('src/views/*.pug')
 		.pipe(pug())
+		.pipe(version({
+			value: '%MDS%',
+			append: {
+				'key': 'v',
+				'to': ['css', 'js'],
+			}
+		}))
 		.pipe(gulp.dest('./'))
 		//.pipe(bs.reload())
 );
