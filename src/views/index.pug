@@ -1,5 +1,9 @@
 extends deps/layout
 
+block vars
+	-
+		meta = "Michael Savchuk, a graphic designer and web developer from Bellingham, Washington."
+
 block content
 	.intro-block.space-after
 		h1 I love Code &amp; Design
@@ -15,7 +19,7 @@ block content
 		.portfolio-item__content
 			.portfolio-item__content__wrapper
 				span.portfolio-item__category Web Design:
-				h1 The Art of Cooking
+				h2.h1 The Art of Cooking
 				p Website for The Art of Cooking, a set of cooking classes for adults aged 30-50 offered by the Institute of Culinary Arts.
 				a.button(href="./art-of-cooking.html") See Project
 
@@ -25,7 +29,7 @@ block content
 		.portfolio-item__content
 			.portfolio-item__content__wrapper
 				span.portfolio-item__category Web Design:
-				h1 Tainted Avocados
+				h2.h1 Tainted Avocados
 				p A custom Wordpress theme and plugin to manage events for an eccentric indie band.
 				a.button(href="./tainted-avocados.html") See Project
 	
@@ -35,6 +39,6 @@ block content
 		.portfolio-item__content
 			.portfolio-item__content__wrapper
 				span.portfolio-item__category Web Design:
-				h1 Hoagies
+				h2.h1 Hoagies
 				p Website for Hoagies, a food truck that sells... well... hoagies.
 				a.button(href="./hoagies.html") See Project

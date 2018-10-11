@@ -6,7 +6,9 @@ const version = require('gulp-version-number');
 
 gulp.task('styles', done =>
 	gulp.src('src/styles/*.scss')
-		.pipe(sass().on('error', sass.logError))
+		.pipe(sass({
+			outputStyle: 'compressed'
+		}).on('error', sass.logError))
 		.pipe(gulp.dest('dist/css'))
 		.pipe(bs.stream())
 );

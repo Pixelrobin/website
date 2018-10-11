@@ -1,7 +1,21 @@
-<!DOCTYPE html>
+-
+	meta = '';
+	title = '';
+
+block vars
+
+doctype html
 
 html(lang="en")
 	head
+		if title
+			title #{title} - Michael Savchuk: Graphic and Web design
+		else
+			title Michael Savchuk: Graphic and Web design
+
+		if meta
+			meta(name="description" content=meta)
+		
 		meta(charset="UTF-8")
 		meta(name="viewport", content="width=device-width, initial-scale=1.0")
 		meta(http-equiv="X-UA-Compatible", content="ie=edge")
@@ -9,14 +23,13 @@ html(lang="en")
 		link(rel="stylesheet", href="https://fonts.googleapis.com/css?family=Bitter:700|Cabin")
 		link(rel="stylesheet", href="./dist/css/main.css")
 
-		title Michael Savchuk
 	body
 		a.no-decoration(href="./index.html")
 			header
 				.header-content
 					img(src="./media/bird.svg", alt="Cartoony avatar of a blue bird.")
 					h1 Michael<br>Savchuk
-		
+
 		block content
 	
 	footer

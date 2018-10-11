@@ -1,5 +1,10 @@
 extends deps/layout
 
+block vars
+	-
+		title = "Tainted Avocados"
+		meta = "Case study for the Tainted Avocados, a website for a fictional indie band by Michael Savchuk"
+
 block content
 	video.shadow.media-big.space-after(mute autoplay loop)
 		source(src="./media/portfolio-items/tainted-avocados/home-page.mp4" type="video/mp4" title="View of the Tainted Avocados homepage.")
