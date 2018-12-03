@@ -1,3 +1,3 @@
-# [pixelrobin.github.io](https://pixelrobin.github.io)
+# [michaelsavchuk.com](https://www.michaelsavchuk.com)
 
-Personal website for the moment. Made with Gulp, Pug and Sass (SCSS).
+Personal website. Made with Gulp, Pug and Sass (SCSS).
