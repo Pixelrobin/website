@@ -44,7 +44,7 @@ gulp.task('clean', done =>
 	del('dist/**/*')
 );
 
-gulp.task('dev', gulp.parallel('styles', 'views', 'media', 'root', done => {
+gulp.task('dev', gulp.series('styles', 'views', 'media', 'root', done => {
 	bs.init({
 		server: { baseDir: './dist/', },
 		port: 3000
@@ -56,4 +56,4 @@ gulp.task('dev', gulp.parallel('styles', 'views', 'media', 'root', done => {
 	gulp.watch('media/**/*', gulp.parallel('media')).on('change', bs.reload);
 }));
 
-gulp.task('build', gulp.parallel('clean', 'styles', 'views', 'media', 'root'));
+gulp.task('build', gulp.series('clean', 'styles', 'views', 'media', 'root'));
