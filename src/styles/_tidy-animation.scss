@@ -1,0 +1,12 @@
+[data-tidy] {
+  transition: transform 1500ms;
+  transition-timing-function: cubic-bezier(0.75,-0.54, 0, 1.42);
+}
+
+.polaroid {
+  transition-delay: 500ms;
+}
+
+.notebook-page {
+  transition-delay: 700ms;
+}

@@ -6,7 +6,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="./src/styles/style.scss">
 
-	<title>Michael Savchuk - Web Developer &amp; Designer</title>
+	<title>Michael Savchuk &mdash; Web Developer &amp; Designer</title>
 
 	<link rel="icon" href="/favicon.ico" sizes="any">
 	<link rel="icon" href="/icon.svg" type="image/svg+xml">
@@ -15,7 +15,7 @@
 </head>
 <body>
 	<div class="layout-grid">
-		<header class="hello-sticker card">
+		<header class="hello-sticker" data-tidy>
 			<div class="hello-sticker__header">
 				<span class="hello-sticker__hello">Hello</span>
 				My name is
@@ -23,19 +23,20 @@
 			<img src="./assets/svg/signature.svg" alt="Michael Savchuk">
 		</header>
 		<img
-			class="polaroid card"
+			class="polaroid"
 			src="./assets/images/workin-in-a-coffee-shop@2x.jpg"
 			alt="Picture of me in a green sweater working in a coffee shop. I'm not looking directly at the camera."
-			title="Just between you and me, I really think I need to think of something better to do with my hair..."
 			srcset="
 				./assets/images/workin-in-a-coffee-shop.jpg 1x,
 				./assets/images/workin-in-a-coffee-shop@2x.jpg 2x
 			"
 			width="800"
 			height="1007"
+			style="aspect-ratio: 800 / 1007"
+			data-tidy
 		>
-		<main class="notebook-page card">
-			<p>I'm a web developer and designer currently living in Bellingham, Washington.</p>
+		<main class="notebook-page" data-tidy>
+			<p>I'm a web developer and designer currently living in Bellingham, WA.</p>
 			<p>I&apos;m very detail oriented, passionate about my work, and driven to craft experiences that empower and delight people.</p>
 			<p>Let&apos;s get in touch!</p>
 
@@ -47,14 +48,16 @@
 				</ul>
 			</nav>
 		</main>
+
+		<button id="organize" class="tidy-button">Tidy things up</button>
 	</div>
 
-	<button id="organize">Tidy this up</button>
+
 	<script>
 		const button = document.getElementById('organize');
 		button.addEventListener('click', () => {
-			console.log(document.querySelectorAll('.card'));
-			document.querySelectorAll('.card').forEach(el => el.style.transform = 'none');
+			document.querySelectorAll('[data-tidy]').forEach(el => el.style.transform = 'none');
+			button.disabled = true;
 		})
 	</script>
 </body>
