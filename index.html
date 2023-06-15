@@ -4,33 +4,65 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="./style.css">
+	<link rel="stylesheet" href="./src/styles/style.scss">
 
-	<title>Michael Savchuk - Web Developer &amp; Designer</title>
+	<title>Michael Savchuk &mdash; Web Developer &amp; Designer</title>
 
 	<link rel="icon" href="/favicon.ico" sizes="any">
 	<link rel="icon" href="/icon.svg" type="image/svg+xml">
-	<link rel="apple-touch-icon" href="/apple-touch-icon.png">
-	<link rel="manifest" href="/manifest.webmanifest">
 </head>
 <body>
-	<main>
-		<h1 id="title">Hello,</h1>
-		<p>My name is Michael Savchuk. Nice to meet you! I&apos;m a Web Developer &amp; Designer from Bellingham, Washington. Currently I work with the awesome people over at <a href="https://www.solegraphics.com/">Sole Graphics.</a></p>
-		<ul class="link-list">
-			<li>
-				<a class="icon" href="https://www.linkedin.com/in/michaelsavchuk/">
-					<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-linkedin"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
-				</a>
-			</li>
-			<li>
-				<a class="icon" href="https://github.com/Pixelrobin">
-					<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-github"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
-				</a>
-			</li>
-			<li class="break-mobile"><a href="./michael-savchuk-resume.pdf" class="button">Résumé</a></li>
-			<li class="break-mobile"><a href="mailto:contact@michaelsavchuk.com" class="button">Contact Me</a></li>
-		</ul>
-	</main>
+	<div class="layout-grid">
+		<header class="hello-sticker" data-tidy>
+			<div class="hello-sticker__header">
+				<span class="hello-sticker__hello">Hello</span>
+				My name is
+			</div>
+			<img
+				src="./assets/images/signature.jpg"
+				alt="Michael Savchuk"
+				width="800"
+				height="334"
+				style="aspect-ratio: 800 / 334"
+			>
+		</header>
+		<img
+			class="polaroid"
+			src="./assets/images/workin-in-a-coffee-shop@2x.jpg"
+			alt="Picture of me in a green sweater working in a coffee shop. I'm not looking directly at the camera."
+			srcset="
+				./assets/images/workin-in-a-coffee-shop.jpg 1x,
+				./assets/images/workin-in-a-coffee-shop@2x.jpg 2x
+			"
+			width="800"
+			height="1007"
+			style="aspect-ratio: 800 / 1007"
+			data-tidy
+		>
+		<main class="notebook-page" data-tidy>
+			<p>I'm a web developer and designer currently living in Bellingham, WA.</p>
+			<p>I&apos;m very detail oriented, passionate about my work, and driven to craft experiences that empower and delight people.</p>
+			<p>Let&apos;s get in touch!</p>
+
+			<nav class="notebook-links">
+				<ul>
+					<li class="link-file">Check out my <a href="./michael-savchuk-resume.pdf">résumé</a></li>
+					<li class="link-send">Send me an <a href="mailto:contact@michaelsavchuk.com">email</a></li>
+					<li class="link-external">Visit my <a href="https://www.linkedin.com/in/michaelsavchuk/">LinkedIn</a> or <a href="https://github.com/Pixelrobin">GitHub</a></li>
+				</ul>
+			</nav>
+		</main>
+
+		<button id="organize" class="tidy-button">Tidy things up</button>
+	</div>
+
+
+	<script>
+		const button = document.getElementById('organize');
+		button.addEventListener('click', () => {
+			document.querySelectorAll('[data-tidy]').forEach(el => el.style.transform = 'none');
+			button.disabled = true;
+		})
+	</script>
 </body>
 </html>
