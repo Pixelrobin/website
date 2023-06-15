@@ -1,0 +1,23 @@
+.notebook-page {
+  background-color: var(--c-notebook);
+  padding: var(--grid-size);
+  line-height: var(--grid-size);
+  border-radius: 0.5rem;
+  width: 100%;
+  max-width: 28rem;
+
+  display: flex;
+  flex-direction: column;
+  gap: var(--grid-size);
+
+  background-image: url('../../assets/svg/grid.svg');
+  background-size: var(--grid-size) var(--grid-size);
+
+  color: rgba(0, 0, 0, 0.9);
+
+  box-shadow: 0.2rem 0.2rem 0.25rem 0 rgba(0, 0, 0, 0.15);
+
+  & > * {
+    margin: 0;
+  }
+}

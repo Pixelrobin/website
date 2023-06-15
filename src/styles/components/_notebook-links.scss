@@ -1,0 +1,40 @@
+.notebook-links {
+  margin: 0;
+  padding: 0;
+  line-height: var(--grid-size);
+  font-size: inherit;
+
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  li {
+    &::before {
+      content: '';
+      display: inline-block;
+      height: 1em;
+      width: var(--grid-size);
+      margin-right: calc(var(--grid-size) * 0.25);
+      // background-color: red;
+      vertical-align: middle;
+      background-size: contain;
+      background-position: center;
+      background-repeat: no-repeat;
+      opacity: 0.8;
+    }
+  }
+
+  .link-file::before {
+    background-image: url('../../assets/svg/file-text.svg');
+  }
+
+  .link-send::before {
+    background-image: url('../../assets/svg/send.svg');
+  }
+
+  .link-external::before {
+    background-image: url('../../assets/svg/external-link.svg');
+  }
+}

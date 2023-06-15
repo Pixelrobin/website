@@ -1,0 +1,46 @@
+.layout-grid {
+  width: 100%;
+  max-width: 50rem;
+  padding: 3rem 1rem;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr;
+
+  align-items: center;
+  justify-items: center;
+
+  gap: 1rem;
+
+  .hello-sticker {
+    
+  }
+
+  .polaroid {
+    
+  }
+
+  .notebook-page {
+  }
+
+  @media (min-width: 50rem) {
+    grid-template-columns: auto 1fr;
+
+    padding: 4rem 2rem;
+    row-gap: 1rem;
+
+    .hello-sticker {
+      grid-column: span 2;
+      transform: rotate(-4deg);
+    }
+
+    .polaroid {
+      align-self: start;
+      justify-self: end;
+      transform: translateY(1rem) rotate(-2deg);
+    }
+
+    .notebook-page {
+      transform: translateY(-1rem) rotate(1.5deg);
+    }
+  }
+}

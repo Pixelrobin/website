@@ -8,6 +8,12 @@
     "http-server": "^14.1.0"
   },
   "scripts": {
-    "dev": "http-server ."
+    "dev": "parcel index.html"
+  },
+  "devDependencies": {
+    "@parcel/packager-raw-url": "^2.9.2",
+    "@parcel/transformer-sass": "^2.9.2",
+    "@parcel/transformer-webmanifest": "^2.9.2",
+    "parcel": "^2.9.2"
   }
 }
