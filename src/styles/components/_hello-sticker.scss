@@ -4,7 +4,7 @@
   --sticker-gap: 0.5rem;
 
   color: var(--c-white);
-  font-size: 0.75rem;
+  font-size: 0.5rem;
   text-transform: uppercase;
   text-align: center;
   line-height: 1;
@@ -12,7 +12,7 @@
   letter-spacing: 0.15em;
   border-radius: 0.5rem;
   width: 100%;
-  max-width: 18rem;
+  max-width: 12rem;
   background-color: white;
 
   display: grid;
@@ -40,7 +40,7 @@
 
   &__hello {
     display: block;
-    font-size: 1.75rem;
+    font-size: 1.25rem;
   }
 
   img {
