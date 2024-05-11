@@ -1,16 +1,19 @@
 {
   "name": "website",
-  "version": "2.0.0",
+  "version": "3.0.0",
   "description": "Personal website of Michael Savchuk",
   "private": true,
   "license": "UNLICENSED",
-  "dependencies": {},
   "scripts": {
-    "dev": "vite",
-    "build": "vite build"
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro check && astro build",
+    "preview": "astro preview",
+    "astro": "astro"
   },
-  "devDependencies": {
-    "sass": "^1.63.4",
-    "vite": "^4.3.9"
+  "dependencies": {
+    "astro": "^4.8.2",
+    "@astrojs/check": "^0.6.0",
+    "typescript": "^5.4.5"
   }
 }
