@@ -1,0 +1,11 @@
+@use '../breakpoints';
+
+.meta {
+  font-size: 1rem;
+  margin: 0;
+  font-weight: 450;
+
+  @media (min-width: breakpoints.$tablet) {
+    font-size: 1.125rem;
+  }
+}

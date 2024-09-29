@@ -1,0 +1,30 @@
+---
+import { getCollection } from "astro:content";
+import { format, formatISO } from "date-fns";
+
+import SiteLayout from "../../layouts/SiteLayout.astro";
+
+export async function getStaticPaths() {
+  const entries = await getCollection("posts");
+
+  return entries.map((entry) => ({
+    params: { slug: entry.slug },
+    props: { entry },
+  }));
+}
+// 2. For your template, you can get the entry directly from the prop
+const { entry } = Astro.props;
+const { Content } = await entry.render();
+---
+
+<SiteLayout>
+  <article class="grid-paper">
+    <header class="trim-margins page-header">
+      <h1>{ entry.data.title }</h1>
+      <p class="meta">Published on <time datetime={ format(entry.data.published, 'yyyy-MM-dd') }>{ format(entry.data.published, 'MMMM d, y') }</time></p>
+    </header>
+    <div class="trim-margins">
+      <Content />
+    </div>
+  </article>
+</SiteLayout>

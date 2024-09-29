@@ -1,0 +1,21 @@
+---
+import SiteLayout from "../../layouts/SiteLayout.astro";
+import { getCollection } from "astro:content";
+
+const posts = await getCollection("posts");
+---
+
+<SiteLayout title="Posts">
+  <section class="page trim-margins">
+    <h2>Latest Posts</h2>
+    <ul>
+      {
+        posts.map((entry) => (
+          <li>
+            <a href={`/posts/${entry.slug}`}>{entry.slug}</a>
+          </li>
+        ))
+      }
+    </ul>
+  </section>
+</SiteLayout>

@@ -1,6 +1,12 @@
+@use 'breakpoints';
+
 :root {
   --c-white: rgb(247, 247, 247);
   --c-background: #d4d4db;
   --c-notebook: #eedcbb;
-  --grid-size: 1.5em;
+  --grid-size: 1.5rem;
+
+  @media (min-width: breakpoints.$tablet) {
+    --grid-size: 1.75rem;
+  }
 }

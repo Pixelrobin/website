@@ -1,28 +1,14 @@
 ---
-import '../styles/style.scss';
+import SiteLayout from '../layouts/SiteLayout.astro';
 
 import { Image } from 'astro:assets';
 import profile from '../assets/images/me.jpg';
 ---
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-	<title>Michael Savchuk &mdash; Web Developer &amp; Designer</title>
-	<meta name="description" content="I'm a web developer and designer currently living in Bellingham, WA.">
-
-	<link rel="icon" href="/favicon.ico" sizes="any">
-	<link rel="icon" href="/icon.svg" type="image/svg+xml">
-
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Rethink+Sans:ital,wght@0,400..800;1,400..800&display=swap" rel="stylesheet">
-</head>
-<body>
+<SiteLayout
+	title="Michael Savchuk — Web Developer"
+	description="I'm a web developer from Bellingham, WA."
+>
 	<div class="layout-grid">
 		<Image
 			src={profile}
@@ -59,5 +45,4 @@ import profile from '../assets/images/me.jpg';
 			});
 		}
 	</script>
-</body>
-</html>
+</SiteLayout>
