@@ -17,14 +17,16 @@ const { entry } = Astro.props;
 const { Content } = await entry.render();
 ---
 
-<SiteLayout>
-  <article class="grid-paper">
-    <header class="trim-margins page-header">
-      <h1>{ entry.data.title }</h1>
-      <p class="meta">Published on <time datetime={ format(entry.data.published, 'yyyy-MM-dd') }>{ format(entry.data.published, 'MMMM d, y') }</time></p>
-    </header>
-    <div class="trim-margins">
-      <Content />
-    </div>
+<SiteLayout
+  title={entry.data.title}
+  currentNavItem="posts"
+  headerTitle={entry.data.title}
+>
+  <Fragment slot="header-content">
+    <p class="meta">Published on <time datetime={ format(entry.data.published, 'yyyy-MM-dd') }>{ format(entry.data.published, 'MMMM d, y') }</time></p>
+  </Fragment>
+
+  <article class="trim-margins">
+    <Content />
   </article>
 </SiteLayout>

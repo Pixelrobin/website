@@ -1,7 +1,33 @@
 ---
 import '../styles/style.scss';
 
-const { title, description } = Astro.props;
+import type { ImageMetadata } from 'astro';
+import { Image } from 'astro:assets';
+
+import SiteNav, { type NavigationItem } from '../components/SiteNav.astro';
+
+interface Props {
+	currentNavItem?: string;
+	title: string;
+	description: string;
+	headerImage?: ImageMetadata;
+	headerTitle: string;
+}
+
+const { title, description, headerImage, currentNavItem, headerTitle } = Astro.props;
+
+const navItems: NavigationItem[] = [
+	{
+		title: 'Home',
+		path: '/',
+		name: 'home',
+	},
+	{
+		title: 'Posts',
+		path: '/posts',
+		name: 'posts',
+	},
+]
 ---
 
 <!DOCTYPE html>
@@ -22,6 +48,39 @@ const { title, description } = Astro.props;
 	<link href="https://fonts.googleapis.com/css2?family=Rethink+Sans:ital,wght@0,400..800;1,400..800&display=swap" rel="stylesheet">
 </head>
 <body>
-	<slot />
+	<div class="site-layout">
+		<h1>Michael Savchuk</h1>
+
+		<div class="container">
+			<header class="site-header">
+				<SiteNav items={navItems} current={currentNavItem} />
+	
+				<div class="site-header-main">
+					<h2 class="site-header-title" set:html={headerTitle}>{ headerTitle }</h2>
+	
+					{ headerImage ? 
+						<div class="site-header-image">
+							<Image
+								src={headerImage}
+								class="rounded border-secondary shadow"
+								alt="Headshot of me with a plain blurred camera. I'm slightly smiling."
+								loading="eager"
+							/>
+						</div>
+					: null }
+	
+					{ Astro.slots.has('header-content') ?
+						<div class="site-header-content trim-margins">
+							<slot name="header-content" />
+						</div>
+					: null}
+				</div>
+			</header>
+	
+			<main class="site-main trim-margins">
+				<slot />
+			</main>
+		</div>
+	</div>
 </body>
 </html>

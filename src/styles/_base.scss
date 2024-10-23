@@ -18,35 +18,13 @@ html {
 
 body {
   margin: 0;
-  padding: 1rem;
+  padding: 0;
   min-height: 100vh;
   width: 100%;
   position: relative;
-  line-height: var(--grid-size);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  line-height: 1.5;
 
   background-color: var(--c-background);
-
-  @supports (mix-blend-mode: multiply) {
-    &::before {
-      content: "";
-      display: block;
-      position: absolute;
-      left: 0;
-      top: 0;
-      width: 100%;
-      height: 100%;
-      background-image: url('../assets/images/groovepaper.png');
-      mix-blend-mode: multiply;
-    }
-  }
-
-  > * {
-    position: relative;
-  }
 }
 
 a {
@@ -54,40 +32,38 @@ a {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-size: 1em;
   margin: 0;
-  margin-top: var(--grid-size);
-  font-weight: 550;
+  margin-top: 2em;
+  font-weight: 450;
+  line-height: 1.25;
 }
 
 h1 {
-  font-size: 2em;
-  line-height: calc(var(--grid-size) * 2);
+  font-size: 1.5rem;
   font-weight: 650;
-  margin-bottom: 0;
+  margin: 0;
 }
 
 h2 {
-  font-size: 1.25em;
+  font-size: 1.4em;
 }
 
 h3 {
   font-size: 1.15em;
 }
 
+@media (min-width: breakpoints.$tablet) {
+  body {
+    font-size: 1.125rem;
+  }
+}
+
 p, ul, ol {
   margin: 0;
-  margin-top: var(--grid-size);
-  vertical-align: baseline;
+  margin-top: 1em;
 }
 
 ul, ol {
   padding: 0;
   padding-left: 1.5em;
-}
-
-@media (min-width: breakpoints.$tablet) {
-  body {
-    font-size: 1.25rem;
-  }
 }

@@ -1,12 +1,29 @@
 @use 'breakpoints';
 
 :root {
+  --layout-padding: 1rem;
+  --content-width: 700px;
+  --content-padding: 1.25rem;
+
   --c-white: rgb(247, 247, 247);
-  --c-background: #d4d4db;
-  --c-notebook: #eedcbb;
-  --grid-size: 1.5rem;
+  --c-background: #D1EAEF;
+  --c-notebook: #F8F6E5;
+
+  --border-radius: 0.75rem;
+
+  --c-dark: #00807F;
+  --c-light: #F8F6E5;
+  --c-secondary: #2CB1B0;
+  --c-text: #523E3D;
+
+  --border-width: 5px;
+
+  @media (min-width: breakpoints.$mobile) {
+    --layout-padding: 1.5rem;
+  }
 
   @media (min-width: breakpoints.$tablet) {
-    --grid-size: 1.75rem;
+    --content-padding: 2rem;
+    --border-width: 6px;
   }
 }

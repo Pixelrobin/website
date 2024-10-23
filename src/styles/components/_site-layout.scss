@@ -1,0 +1,18 @@
+@use '../breakpoints';
+
+.site-layout {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 2rem 0;
+
+  h1 {
+    text-align: center;
+    margin: 0;
+    color: var(--c-dark);
+  }
+
+  .container {
+    filter: drop-shadow(0px 2px 3px rgba(53, 40, 151, 0.15));
+  }
+}

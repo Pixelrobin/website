@@ -1,5 +1,8 @@
 @use 'vars';
 @use 'base';
 @use 'components';
-@use 'tidy-animation';
 @use 'utilities';
+
+@view-transition {
+  navigation: auto;
+}

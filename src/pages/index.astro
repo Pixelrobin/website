@@ -1,48 +1,21 @@
 ---
 import SiteLayout from '../layouts/SiteLayout.astro';
 
-import { Image } from 'astro:assets';
 import profile from '../assets/images/me.jpg';
 ---
 
 <SiteLayout
-	title="Michael Savchuk — Web Developer"
-	description="I'm a web developer from Bellingham, WA."
+	title="Michael Savchuk"
+	description="I’m a full-stack web developer and designer who’s passionate about building accessible experiences that empower and delight."
+	headerImage={profile}
+	currentNavItem="home"
+	headerTitle="Hello,<br>I'm Michael."
 >
-	<div class="layout-grid">
-		<Image
-			src={profile}
-			data-tidy
-			class="polaroid"
-			alt="Headshot of me with a plain blurred camera. I'm slightly smiling."
-			loading="eager"
-		/>
-		<main class="notebook-page" data-tidy>
-			<p>Hi. I'm Michael Savchuk.</p>
-			<p>I'm a Web Developer and Designer based in Bellingham, WA. Currently I'm working as a nomad from Rio de Janeiro.</p>
-			<p>Let&apos;s get in touch!</p>
+	<Fragment slot="header-content">
+		<p>I'm a Full-Stack Developer and Designer who’s passionate about building accessible experiences that empower and delight.</p>
+	</Fragment>
 
-			<nav class="notebook-links">
-				<ul>
-					<li class="link-send">Send me an <a href="mailto:contact@michaelsavchuk.com">email</a></li>
-					<li class="link-external">Visit my <a href="https://www.linkedin.com/in/michaelsavchuk/">LinkedIn</a> or <a href="https://github.com/Pixelrobin">GitHub</a></li>
-				</ul>
-			</nav>
-		</main>
-
-		<button id="organize" class="tidy-button">Tidy things up</button>
-	</div>
-
-
-	<script>
-		const button = document.querySelector<HTMLButtonElement>('#organize');
-
-		if (button) {
-			button.addEventListener('click', () => {
-				document.querySelectorAll<HTMLElement>('[data-tidy]')
-					.forEach(el => el.style.transform = 'none');
-				button.disabled = true;
-			});
-		}
-	</script>
+	<p>I’m based in Bellingham, WA and I’m currently working as a nomad from Rio de Janeiro, Brazil.</p>
+	<p>Besides working with the web, I love hiking, biking, longboarding, and perfecting my coffee-brewing technique. I dabble in game development too.</p>
+	<p>Let’s get in touch!</p>
 </SiteLayout>

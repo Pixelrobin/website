@@ -1,0 +1,32 @@
+.site-nav {
+  padding-left: var(--border-radius);
+
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+    font-size: 1rem;
+  }
+
+  a {
+    font-weight: bold;
+    text-decoration: none;
+    color: var(--c-light);
+    background-color: var(--c-secondary);
+    padding: 0 1.25rem;
+    height: 2.25rem;
+    border-top-left-radius: var(--border-radius);
+    border-top-right-radius: var(--border-radius);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .current a {
+    background-color: var(--c-dark);
+    height: 2.75rem;
+  }
+}

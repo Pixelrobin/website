@@ -1,9 +1,5 @@
-@use 'layout-grid';
-@use 'polaroid';
-@use 'notebook-page';
-@use 'notebook-links';
-@use 'tidy-button';
-@use 'page';
-@use 'meta';
-@use 'page-header';
-@use 'grid-paper';
+@use 'site-layout';
+@use 'site-header';
+@use 'site-nav';
+@use 'site-main';
+@use 'container';
