@@ -1,0 +1,46 @@
+@use '../mixins';
+
+.post-excerpt {
+  @include mixins.reset-link();
+
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  position: relative;
+
+  & > * {
+    position: relative;
+  }
+
+  h3 {
+    font-weight: 550;
+    color: var(--c-dark);
+    transition: color 150ms;
+  }
+
+  .meta {
+    opacity: 0.9;
+  }
+
+  &::before {
+    content: "";
+    pointer-events: none;
+    display: block;
+    border-radius: var(--border-radius);
+    background-color: var(--c-text);
+    opacity: 0;
+    position: absolute;
+    inset: -0.75rem -1rem;
+    transition: opacity 150ms;
+  }
+
+  &:hover, &:focus {
+    &::before {
+      opacity: 0.05;
+    }
+
+    h3 {
+      color: var(--c-text);
+    }
+  }
+}

@@ -33,7 +33,7 @@ a {
 
 h1, h2, h3, h4, h5, h6 {
   margin: 0;
-  margin-top: 2em;
+  margin-top: 1.75em;
   font-weight: 450;
   line-height: 1.25;
 }
@@ -49,7 +49,8 @@ h2 {
 }
 
 h3 {
-  font-size: 1.15em;
+  font-size: 1.2em;
+  font-weight: 475;
 }
 
 @media (min-width: breakpoints.$tablet) {

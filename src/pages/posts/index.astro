@@ -1,8 +1,11 @@
 ---
-import SiteLayout from "../../layouts/SiteLayout.astro";
 import { getCollection } from "astro:content";
 
-const posts = await getCollection("posts");
+import SiteLayout from "../../layouts/SiteLayout.astro";
+import PostExcerpt from "../../components/PostExcerpt.astro";
+
+const posts = (await getCollection("posts"))
+  .sort((a, b) => b.data.published.getTime() - a.data.published.getTime());
 ---
 
 <SiteLayout
@@ -11,15 +14,11 @@ const posts = await getCollection("posts");
   currentNavItem="posts"
   headerTitle="Posts"
 >
-  <!-- <Fragment slot="header-content">
-    <p>TODO: Something witty about how I don't write enough.</p>
-  </Fragment> -->
-
-  <ul>
+  <ul class="reset-list vertical-flow">
     {
       posts.map((entry) => (
         <li>
-          <a href={`/posts/${entry.slug}`}>{entry.slug}</a>
+          <PostExcerpt entry={entry} />
         </li>
       ))
     }

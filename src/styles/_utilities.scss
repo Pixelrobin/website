@@ -1,3 +1,5 @@
+@use 'mixins';
+
 .rounded {
   border-radius: var(--border-radius);
 }
@@ -18,4 +20,12 @@
   & > :last-child {
     margin-bottom: 0;
   }
+}
+
+.reset-list {
+  @include mixins.reset-list();
+}
+
+.reset-link {
+  @include mixins.reset-link();
 }

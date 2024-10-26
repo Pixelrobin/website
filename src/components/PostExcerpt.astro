@@ -1,0 +1,15 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import { format, formatISO } from "date-fns";
+
+interface Props {
+  entry: CollectionEntry<"posts">;
+}
+
+const { entry } = Astro.props;
+---
+
+<a href={`/posts/${entry.slug}`} class="post-excerpt trim-margins">
+  <h3>{ entry.data.title }</h3>
+  <time class="meta" datetime={ format(entry.data.published, 'yyyy-MM-dd') }>{ format(entry.data.published, 'MMMM d, y') }</time>
+</a>
