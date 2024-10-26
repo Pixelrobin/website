@@ -1,7 +1,28 @@
 ---
 import SiteLayout from '../layouts/SiteLayout.astro';
 
+import { Bluesky, GitHub, ItchIo, LinkedIn } from '../components/icons';
+
 import profile from '../assets/images/me.jpg';
+
+const socials = [
+	{
+		link: 'https://bsky.app/profile/pixelrobin.bsky.social',
+		icon: Bluesky,
+	},
+	{
+		link: 'https://github.com/Pixelrobin',
+		icon: GitHub,
+	},
+	{
+		link: 'https://www.linkedin.com/in/michaelsavchuk/',
+		icon: LinkedIn,
+	},
+	{
+		link: 'https://pixelrobin.itch.io/',
+		icon: ItchIo,
+	},
+]
 ---
 
 <SiteLayout
@@ -19,8 +40,10 @@ import profile from '../assets/images/me.jpg';
 	<p>Besides working with the web, I love hiking, biking, longboarding, and perfecting my coffee-brewing technique. I dabble in game development too.</p>
 	<p>Let’s get in touch!</p>
 
-	<p>
+	<p class="horizontal-flow">
 		<a href="mailto:michael@michaelsavchuk.com" class="button">Email Me</a>
+		<span>
+			{socials.map((social) => <a class="icon-button" href={social.link}><social.icon /></a>)}
+		</span>
 	</p>
-
 </SiteLayout>

@@ -1,0 +1,22 @@
+@use '../mixins';
+
+.icon-button {
+  @include mixins.reset-link();
+
+  display: inline-flex;
+  height: 2.75rem;
+  width: 2.75rem;
+  align-items: center;
+  justify-content: center;
+  border-radius: 99rem;
+  transition: background-color 150ms;
+
+  .icon {
+    height: 1em;
+    width: auto;
+  }
+
+  &:hover, &:focus {
+    background-color: #f0eedd;
+  }
+}
