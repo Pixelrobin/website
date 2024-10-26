@@ -68,3 +68,8 @@ ul, ol {
   padding: 0;
   padding-left: 1.5em;
 }
+
+img, svg {
+  display: block;
+  max-width: 100%;
+}
