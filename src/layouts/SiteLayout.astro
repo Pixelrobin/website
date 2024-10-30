@@ -49,8 +49,6 @@ const navItems: NavigationItem[] = [
 </head>
 <body>
 	<div class="site-layout">
-		<h1>Michael Savchuk</h1>
-
 		<div class="container">
 			<header class="site-header">
 				<SiteNav items={navItems} current={currentNavItem} />
@@ -67,7 +65,7 @@ const navItems: NavigationItem[] = [
 						</div>
 					: null }
 
-					<h2 class="site-header-title" set:html={headerTitle}>{ headerTitle }</h2>
+					<h1 class="site-header-title" set:html={headerTitle}>{ headerTitle }</h1>
 
 					{ Astro.slots.has('header-content') ?
 						<div class="site-header-content trim-margins">

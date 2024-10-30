@@ -1,13 +1,10 @@
 @use 'breakpoints';
 @use 'vars';
 
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
-}
-
-@keyframes test {
-  from { font-weight: 400; }
-  to { font-weight: 700; }
 }
 
 html {
@@ -31,7 +28,12 @@ a {
   color: inherit;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   margin: 0;
   margin-top: 1.75em;
   font-weight: 450;
@@ -39,17 +41,16 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-  font-size: 1.5rem;
-  font-weight: 650;
-  margin: 0;
+  font-size: 1.5em;
 }
 
 h2 {
-  font-size: 1.4em;
+  font-size: 1.25em;
+  font-weight: 475;
 }
 
 h3 {
-  font-size: 1.2em;
+  font-size: 1.1em;
   font-weight: 475;
 }
 
@@ -59,17 +60,21 @@ h3 {
   }
 }
 
-p, ul, ol {
+p,
+ul,
+ol {
   margin: 0;
   margin-top: 1em;
 }
 
-ul, ol {
+ul,
+ol {
   padding: 0;
   padding-left: 1.5em;
 }
 
-img, svg {
+img,
+svg {
   display: block;
   max-width: 100%;
 }
