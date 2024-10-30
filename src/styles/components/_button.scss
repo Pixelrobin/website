@@ -3,6 +3,8 @@
 .button {
   @include mixins.reset-button();
 
+  --button-elevation: 0px;
+
   position: relative;
   text-decoration: none;
   display: inline-flex;
@@ -16,22 +18,23 @@
   font-size: 1rem;
   font-weight: bold;
   letter-spacing: 0.05em;
-  box-shadow: 0 2px var(--c-text);
+  box-shadow: 0 calc(2px - var(--button-elevation)) var(--c-text);
   transition: box-shadow 300ms, transform 300ms;
+  transform: translateY(var(--button-elevation));
 
   &::after {
     content: "";
     position: absolute;
     inset: 0;
     transition: inherit;
+    transform: translateY(calc(-1 * var(--button-elevation)));
   }
 
-  &:hover:not(:active) {
-    box-shadow: 0 4px var(--c-text);
-    transform: translateY(-2px);
+  &:hover {
+    --button-elevation: -2px;
+  }
 
-    &::after {
-      transform: translateY(2px);
-    }
+  &:active {
+    --button-elevation: 2px;
   }
 }
