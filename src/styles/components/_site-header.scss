@@ -2,7 +2,7 @@
 
 .site-header {
   display: grid;
-  color: var(--c-light);
+  color: var(--c-background);
   grid-template-columns: 1fr;
   column-gap: var(--content-padding);
   position: relative;
@@ -22,8 +22,8 @@
   gap: calc(var(--content-padding) * 0.5);
 
   padding: var(--content-padding);
-  background-color: var(--c-dark);
-  color: var(--c-light);
+  background-color: var(--c-primary);
+  color: var(--c-background);
   border-top-left-radius: var(--border-radius);
   border-top-right-radius: var(--border-radius);
 

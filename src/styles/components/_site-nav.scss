@@ -14,7 +14,7 @@
   a {
     font-weight: bold;
     text-decoration: none;
-    color: var(--c-light);
+    color: var(--c-background);
     background-color: var(--c-secondary);
     padding: 0 1.25rem;
     height: 2.25rem;
@@ -26,7 +26,7 @@
   }
 
   .current a {
-    background-color: var(--c-dark);
+    background-color: var(--c-primary);
     height: 2.75rem;
   }
 }

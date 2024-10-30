@@ -17,6 +17,6 @@
   }
 
   &:hover, &:focus {
-    background-color: #f0eedd;
+    background-color: var(--c-background-darker);
   }
 }
