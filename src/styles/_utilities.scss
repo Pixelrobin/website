@@ -1,13 +1,5 @@
 @use 'mixins';
 
-.rounded {
-  border-radius: var(--border-radius);
-}
-
-.border-secondary {
-  border: var(--border-width) solid var(--c-secondary);
-}
-
 .shadow {
   box-shadow: 0 2px rgba(0, 0, 0, 0.15);
 }

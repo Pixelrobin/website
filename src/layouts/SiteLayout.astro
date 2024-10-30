@@ -56,19 +56,19 @@ const navItems: NavigationItem[] = [
 				<SiteNav items={navItems} current={currentNavItem} />
 	
 				<div class="site-header-main">
-					<h2 class="site-header-title" set:html={headerTitle}>{ headerTitle }</h2>
-	
 					{ headerImage ? 
 						<div class="site-header-image">
 							<Image
 								src={headerImage}
-								class="rounded border-secondary shadow"
+								class="header-image shadow"
 								alt="Headshot of me with a plain blurred camera. I'm slightly smiling."
 								loading="eager"
 							/>
 						</div>
 					: null }
-	
+
+					<h2 class="site-header-title" set:html={headerTitle}>{ headerTitle }</h2>
+
 					{ Astro.slots.has('header-content') ?
 						<div class="site-header-content trim-margins">
 							<slot name="header-content" />
