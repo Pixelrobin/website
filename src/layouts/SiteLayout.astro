@@ -80,6 +80,12 @@ const navItems: NavigationItem[] = [
 			<main class="site-main trim-margins">
 				<slot />
 			</main>
+
+			{ Astro.slots.has('footer-content') ?
+				<footer class="trim-margins site-footer">
+					<slot name="footer-content" />
+				</footer>
+			: null}
 		</div>
 	</div>
 </body>
