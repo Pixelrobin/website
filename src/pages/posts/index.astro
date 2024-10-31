@@ -1,11 +1,6 @@
 ---
-import { getCollection } from "astro:content";
-
 import SiteLayout from "../../layouts/SiteLayout.astro";
-import PostExcerpt from "../../components/PostExcerpt.astro";
-
-const posts = (await getCollection("posts"))
-  .sort((a, b) => b.data.published.getTime() - a.data.published.getTime());
+import PostList from "../../components/PostList.astro";
 ---
 
 <SiteLayout
@@ -14,13 +9,5 @@ const posts = (await getCollection("posts"))
   currentNavItem="posts"
   headerTitle="Posts"
 >
-  <ul class="reset-list vertical-flow">
-    {
-      posts.map((entry) => (
-        <li>
-          <PostExcerpt entry={entry} />
-        </li>
-      ))
-    }
-  </ul>
+  <PostList />
 </SiteLayout>
