@@ -15,10 +15,17 @@ const { items, current } = Astro.props;
 
 <nav class="site-nav">
   <ul>
-    {items.map(item => (
-      <li class={ current === item.name ? 'current' : null }>
-        <a href={ item.path }>{ item.title }</a>
-      </li>
-    ))}
+    {
+      items.map((item) => (
+        <li
+          class={current === item.name ? "current" : null}
+          data-nav-name={item.name}
+        >
+          <a href={item.path}>
+            <span>{item.title}</span>
+          </a>
+        </li>
+      ))
+    }
   </ul>
 </nav>

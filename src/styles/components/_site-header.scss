@@ -20,6 +20,7 @@
   display: grid;
   grid-template-columns: 1fr;
   gap: calc(var(--content-padding) * 0.5);
+  z-index: 1;
 
   padding: var(--content-padding);
   background-color: var(--c-primary);
@@ -27,7 +28,7 @@
   border-top-left-radius: var(--border-radius);
   border-top-right-radius: var(--border-radius);
 
-  & > * {
+  &>* {
     margin: 0;
   }
 
