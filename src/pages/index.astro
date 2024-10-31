@@ -1,28 +1,27 @@
 ---
-import SiteLayout from '../layouts/SiteLayout.astro';
-
-import { Bluesky, GitHub, ItchIo, LinkedIn } from '../components/icons';
-
-import profile from '../assets/images/me.jpg';
+import SiteLayout from "../layouts/SiteLayout.astro";
+import { Bluesky, GitHub, ItchIo, LinkedIn } from "../components/icons";
+import PostList from "../components/PostList.astro";
+import profile from "../assets/images/me.jpg";
 
 const socials = [
 	{
-		link: 'https://bsky.app/profile/pixelrobin.bsky.social',
+		link: "https://bsky.app/profile/pixelrobin.bsky.social",
 		icon: Bluesky,
 	},
 	{
-		link: 'https://github.com/Pixelrobin',
+		link: "https://github.com/Pixelrobin",
 		icon: GitHub,
 	},
 	{
-		link: 'https://www.linkedin.com/in/michaelsavchuk/',
+		link: "https://www.linkedin.com/in/michaelsavchuk/",
 		icon: LinkedIn,
 	},
 	{
-		link: 'https://pixelrobin.itch.io/',
+		link: "https://pixelrobin.itch.io/",
 		icon: ItchIo,
 	},
-]
+];
 ---
 
 <SiteLayout
@@ -30,20 +29,46 @@ const socials = [
 	description="I’m a full-stack web developer and designer who’s passionate about building accessible experiences that empower and delight."
 	headerImage={profile}
 	currentNavItem="home"
-	headerTitle="Hello,<br>I'm Michael."
+	headerTitle="Hello,<br>I'm Michael Savchuk."
 >
 	<Fragment slot="header-content">
-		<p>I'm a Full-Stack Developer and Designer who’s passionate about building accessible experiences that empower and delight.</p>
+		<p>
+			I'm a Full-Stack Developer and Designer who’s passionate about building
+			digital experiences that empower and delight.
+		</p>
 	</Fragment>
 
-	<p>I’m based in Bellingham, WA and I’m currently working as a nomad from Rio de Janeiro, Brazil.</p>
-	<p>Besides working with the web, I love hiking, biking, longboarding, and perfecting my coffee-brewing technique. I dabble in game development too.</p>
-	<p>Let’s get in touch!</p>
+	<div class="vertical-flow">
+		<section class="trim-margins">
+			<p>
+				I’m based in Bellingham, WA and currently working as a nomad from Rio de
+				Janeiro, Brazil.
+			</p>
+			<p>
+				Besides working with the web, I love hiking, biking, longboarding, and
+				perfecting my coffee brewing technique. I dabble in game development
+				too.
+			</p>
+			<p>Let’s get in touch!</p>
+			<p class="horizontal-flow">
+				<a href="#" class="button">Email Me</a>
+				<span>
+					{
+						socials.map((social) => (
+							<a class="icon-button" href={social.link}>
+								<social.icon />
+							</a>
+						))
+					}
+				</span>
+			</p>
+		</section>
+	</div>
 
-	<p class="horizontal-flow">
-		<a href="mailto:michael@michaelsavchuk.com" class="button">Email Me</a>
-		<span>
-			{socials.map((social) => <a class="icon-button" href={social.link}><social.icon /></a>)}
-		</span>
-	</p>
+	<Fragment slot="footer-content">
+		<section class="trim-margins vertical-flow">
+			<h2>Latest Posts</h2>
+			<PostList limit={4} />
+		</section>
+	</Fragment>
 </SiteLayout>
