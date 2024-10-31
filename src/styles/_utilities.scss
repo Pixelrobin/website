@@ -21,3 +21,11 @@
 .reset-link {
   @include mixins.reset-link();
 }
+
+.tight {
+  --flow-gap: 1rem;
+}
+
+.loose {
+  --flow-gap: 4rem;
+}
