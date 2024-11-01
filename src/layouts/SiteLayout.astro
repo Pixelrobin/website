@@ -9,7 +9,7 @@ import SiteNav, { type NavigationItem } from "../components/SiteNav.astro";
 interface Props {
 	currentNavItem?: string;
 	title: string;
-	description: string;
+	description?: string;
 	headerImage?: ImageMetadata;
 	headerTitle: string;
 }
@@ -39,7 +39,7 @@ const navItems: NavigationItem[] = [
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
 		<title>{title}</title>
-		<meta name="description" content={description ?? ""} />
+		{description ? <meta name="description" content={description} /> : null}
 
 		<link rel="icon" href="/favicon.ico" sizes="any" />
 		<link rel="icon" href="/icon.svg" type="image/svg+xml" />
