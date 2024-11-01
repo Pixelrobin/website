@@ -2,4 +2,10 @@
   background-color: var(--c-secondary);
   border: var(--border-width) solid var(--c-secondary);
   border-radius: var(--border-radius);
+  transition: transform 300ms;
+  transform-origin: 33% 70%;
+
+  &:hover {
+    transform: translateY(-0.33rem) rotate(-3deg);
+  }
 }

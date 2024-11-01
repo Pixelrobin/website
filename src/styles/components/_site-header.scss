@@ -19,7 +19,7 @@
 .site-header-main {
   display: grid;
   grid-template-columns: 1fr;
-  gap: calc(var(--content-padding) * 0.5);
+  gap: calc(var(--content-padding) * 0.75);
   z-index: 1;
 
   padding: var(--content-padding);
