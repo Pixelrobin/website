@@ -1,0 +1,12 @@
+@use '../breakpoints';
+
+.container {
+  width: 100%;
+  max-width: calc(var(--content-width) + 2 * var(--layout-padding));
+  padding: var(--layout-padding);
+  margin: 0 auto;
+
+  @media (min-width: breakpoints.$tablet) {
+    width: 90%;
+  }
+}

@@ -21,3 +21,14 @@
   /* Corrects inability to style clickable `input` types in iOS */
   -webkit-appearance: none;
 }
+
+@mixin reset-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+@mixin reset-link {
+  text-decoration: inherit;
+  color: inherit;
+}

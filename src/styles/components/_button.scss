@@ -1,0 +1,40 @@
+@use '../mixins';
+
+.button {
+  @include mixins.reset-button();
+
+  --button-elevation: 0px;
+
+  position: relative;
+  text-decoration: none;
+  display: inline-flex;
+  background-color: var(--c-primary);
+  color: var(--c-background);
+  height: 2.75rem;
+  align-items: center;
+  justify-content: center;
+  padding: 0 1.5rem;
+  border-radius: var(--border-radius);
+  font-size: 1rem;
+  font-weight: bold;
+  letter-spacing: 0.05em;
+  box-shadow: 0 calc(2px - var(--button-elevation)) var(--c-text);
+  transition: box-shadow 300ms, transform 300ms;
+  transform: translateY(var(--button-elevation));
+
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    transition: inherit;
+    transform: translateY(calc(-1 * var(--button-elevation)));
+  }
+
+  &:hover {
+    --button-elevation: -2px;
+  }
+
+  &:active {
+    --button-elevation: 2px;
+  }
+}

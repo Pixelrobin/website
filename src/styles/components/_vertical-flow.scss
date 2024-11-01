@@ -1,0 +1,7 @@
+.vertical-flow {
+  --flow-gap: 1.5rem;
+
+  display: flex;
+  flex-direction: column;
+  gap: var(--flow-gap);
+}

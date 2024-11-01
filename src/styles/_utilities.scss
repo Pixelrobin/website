@@ -1,0 +1,31 @@
+@use 'mixins';
+
+.shadow {
+  box-shadow: 0 2px rgba(0, 0, 0, 0.15);
+}
+
+.trim-margins {
+  & > :first-child {
+    margin-top: 0;
+  }
+
+  & > :last-child {
+    margin-bottom: 0;
+  }
+}
+
+.reset-list {
+  @include mixins.reset-list();
+}
+
+.reset-link {
+  @include mixins.reset-link();
+}
+
+.tight {
+  --flow-gap: 1rem;
+}
+
+.loose {
+  --flow-gap: 4rem;
+}
