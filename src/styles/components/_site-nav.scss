@@ -51,7 +51,8 @@
     transition: transform 200ms;
   }
 
-  a:hover {
+  a:hover,
+  a:focus {
     --tab-offset: 0.2rem;
   }
 

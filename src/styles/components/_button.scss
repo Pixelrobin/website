@@ -30,7 +30,8 @@
     transform: translateY(calc(-1 * var(--button-elevation)));
   }
 
-  &:hover {
+  &:hover,
+  &:focus {
     --button-elevation: -2px;
   }
 
