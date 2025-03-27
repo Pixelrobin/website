@@ -5,67 +5,76 @@ import PostList from "../components/PostList.astro";
 import profile from "../assets/images/me.jpg";
 
 const socials = [
-	{
-		link: "https://bsky.app/profile/pixelrobin.bsky.social",
-		icon: Bluesky,
-	},
-	{
-		link: "https://www.linkedin.com/in/michaelsavchuk/",
-		icon: LinkedIn,
-	},
-	{
-		link: "https://pixelrobin.itch.io/",
-		icon: ItchIo,
-	},
+  {
+    link: "https://github.com/Pixelrobin",
+    icon: GitHub,
+    label: "GitHub",
+  },
+  {
+    link: "https://bsky.app/profile/pixelrobin.bsky.social",
+    icon: Bluesky,
+    label: "Bluesky",
+  },
+  {
+    link: "https://www.linkedin.com/in/michaelsavchuk/",
+    icon: LinkedIn,
+    label: "LinkedIn",
+  },
+  {
+    link: "https://pixelrobin.itch.io/",
+    icon: ItchIo,
+    label: "Itch.io",
+  },
 ];
 ---
 
 <SiteLayout
-	title="Michael Savchuk"
-	description="I'm a Full-Stack Developer with design skills who’s passionate about building digital experiences that empower and delight."
-	headerImage={profile}
-	currentNavItem="home"
-	headerTitle="Hello,<br>I'm Michael Savchuk."
+  title="Michael Savchuk"
+  description="I'm a Full-Stack Developer with design skills who’s passionate about building digital experiences that empower and delight."
+  headerImage={profile}
+  currentNavItem="home"
+  headerTitle="Hello,<br>I'm Michael Savchuk."
 >
-	<Fragment slot="header-content">
-		<p>
-			I'm a Full-Stack Developer with design skills who’s passionate about
-			building digital experiences that empower and delight.
-		</p>
-	</Fragment>
+  <Fragment slot="header-content">
+    <p>
+      I'm a Full-Stack Developer with design skills who’s passionate about
+      building digital experiences that empower and delight.
+    </p>
+  </Fragment>
 
-	<div class="vertical-flow">
-		<section class="trim-margins">
-			<p>
-				I have over 5 years of experience bringing websites and apps to life for
-				many different clients. I’m based in Bellingham, WA and currently
-				working as a nomad from Rio de Janeiro, Brazil.
-			</p>
-			<p>
-				Besides working with the web, I love hiking, biking, longboarding, and
-				perfecting my coffee brewing technique. I dabble in game development
-				too.
-			</p>
-			<p>Let’s get in touch!</p>
-			<p class="horizontal-flow">
-				<a href="mailto:contact@michaelsavchuk.com" class="button">Email Me</a>
-				<span>
-					{
-						socials.map((social) => (
-							<a class="icon-button" href={social.link}>
-								<social.icon />
-							</a>
-						))
-					}
-				</span>
-			</p>
-		</section>
-	</div>
+  <div class="vertical-flow">
+    <section class="trim-margins">
+      <p>
+        I have over 5 years of experience bringing websites and apps to life for
+        many different clients. I’m based in Bellingham, WA and currently
+        working as a nomad from Rio de Janeiro, Brazil.
+      </p>
+      <p>
+        Besides working with the web, I love hiking, biking, longboarding, and
+        perfecting my coffee brewing technique. I dabble in game development
+        too.
+      </p>
+      <p>Let’s get in touch!</p>
+      <p class="horizontal-flow">
+        <a href="mailto:contact@michaelsavchuk.com" class="button">Email Me</a>
+        <span>
+          {
+            socials.map((social) => (
+              <a class="icon-button" href={social.link} title={social.label}>
+                <span class="sr-only">{social.label}</span>
+                <social.icon />
+              </a>
+            ))
+          }
+        </span>
+      </p>
+    </section>
+  </div>
 
-	<Fragment slot="footer-content">
-		<section class="trim-margins vertical-flow">
-			<h2>Latest Posts</h2>
-			<PostList limit={4} />
-		</section>
-	</Fragment>
+  <Fragment slot="footer-content">
+    <section class="trim-margins vertical-flow">
+      <h2>Latest Posts</h2>
+      <PostList limit={4} />
+    </section>
+  </Fragment>
 </SiteLayout>
